@@ -63,7 +63,7 @@ class ConnectionAttr:
         _ = self.adb_client
 
         # Parse custom serial
-        self.serial = str(self.config.Emulator_Serial)
+        self.serial = str(self.config.Emulator_Serial).strip()
         self.serial_check()
         self.config.DEVICE_OVER_HTTP = self.is_over_http
 
