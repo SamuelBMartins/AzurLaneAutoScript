@@ -96,6 +96,7 @@ class Connection(ConnectionAttr):
         super().__init__(config)
         if not self.is_over_http:
             self.detect_device()
+            self.serial = self.serial.replace("\x08", "")
 
         # Connect
         self.adb_connect(self.serial)

@@ -5723,9 +5723,8 @@
   "Research": {
     "Scheduler": {
       "Enable": {
-        "type": "lock",
-        "value": true,
-        "display": "disabled"
+        "type": "checkbox",
+        "value": false
       },
       "NextRun": {
         "type": "datetime",
