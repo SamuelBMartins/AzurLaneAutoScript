@@ -272,7 +272,7 @@ class AzurLaneConfig(ConfigUpdater, ManualConfig, GeneratedConfig, ConfigWatcher
                 if isinstance(next_run, datetime) and next_run > limit:
                     deep_set(self.data, keys=f"{task}.Scheduler.NextRun", value=now)
 
-        for task in ["Commission", "Research", "Reward"]:
+        for task in ["Commission", "Reward"]:
             enable = deep_get(
                 self.data, keys=f"{task}.Scheduler.Enable", default=None
             )
